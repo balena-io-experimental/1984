@@ -4,8 +4,9 @@ import NavBar from './components/NavBar';
 import Login from './components/Login';
 import Devices from './components/Devices';
 import Message from './components/Message';
-import { resin } from './api';
 import logo from '../public/logo.svg';
+
+import resin from './api';
 
 const defaultState = {
   devices: [],
@@ -43,13 +44,12 @@ class App extends Component {
         .then(() => {
           this.setState({ loading: false });
         })
-        .catch((err) => {
-          this.setState({ error: err })
-        });
       } else {
         this.setState({loading: false});
       }
-    })
+    }).catch((err) => {
+      this.setState({ error: err })
+    });
   }
 
   whoami() {
@@ -86,7 +86,7 @@ class App extends Component {
 
   loadRoute() {
     if (!this.state.loading && this.state.username) {
-      return <Devices app={this.state.selectedApp} devices={this.state.devices} />
+      return <Devices app={this.state.selectedApp} devices={this.state.devices} enableDeviceUrl={resin.models.device.enableDeviceUrl} />
     } else if (!this.state.loading && !this.state.username){
       return <Login login={this.login.bind(this)} />
     } else {

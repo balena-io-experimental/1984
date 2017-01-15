@@ -3,7 +3,7 @@ import { Alert } from 'react-bootstrap';
 
 class Message extends Component {
 
-  setTimeout(msg) {
+  ClearOnTimeOut() {
     // clear the error after 5s
     setTimeout(() => {
       this.props.clearError();
@@ -13,7 +13,7 @@ class Message extends Component {
   render() {
     const msg = this.props.message;
     if (msg) {
-      this.setTimeout(msg);
+      this.ClearOnTimeOut();
       return (
         <Alert bsStyle="warning">
           <h4>{msg.name}</h4>

@@ -6,4 +6,4 @@ const resin = resinSDK({
   debug: true
 });
 
-export { resin }
+export default resin;
