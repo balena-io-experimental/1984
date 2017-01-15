@@ -6,10 +6,10 @@ This is a simple ui from [resin-cams](https://github.com/resin-io-playground/res
 
 # Warning
 
-Currently resin device urls are too slow to get a realtime feed. We are working on it.
+You can't currently sign if your resin.io account has 2fa enabled, also resin device urls are currently too slow to get a realtime feed. We are working on it.
 
 ## To try it out:
 
 1. Install [resin-cam](https://github.com/resin-io-playground/resin-cam) on your resin.io devices.
-2. Visit http://resin-io-playground.github.io/1984
+2. Visit http://resin-io-playground.github.io/1984 & sign in with your resin.io account credentials.
 3. Select your app from the drop down and view your live streams!
